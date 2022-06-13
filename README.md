@@ -1,4 +1,6 @@
-# AvantioFrontendJsChallenge
+# Avantio Frontend JS Challenge
+
+Solution of https://github.com/Avantio-ITS/frontend-js-challenge
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
