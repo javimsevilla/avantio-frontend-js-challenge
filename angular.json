@@ -111,6 +111,37 @@
               "src/**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "avantio-frontend-js-challenge:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "avantio-frontend-js-challenge:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "avantio-frontend-js-challenge:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "avantio-frontend-js-challenge:serve:production"
+            }
+          }
         }
       }
     }
