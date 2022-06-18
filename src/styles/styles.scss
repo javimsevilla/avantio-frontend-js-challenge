@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+html,
+body {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+button {
+  user-select: none;
+}
