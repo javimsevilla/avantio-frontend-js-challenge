@@ -3,12 +3,15 @@ import { CustomBreakpointObserver } from 'src/app/layout';
 
 @Component({
   selector: 'app-menu',
-  template: ` <app-menu-small *ngIf="isSmall$ | async"></app-menu-small> `,
+  template: `
+    <app-menu-small *ngIf="isSmallScreen$ | async"></app-menu-small>
+    <app-menu-medium *ngIf="isMediumScreen$ | async"></app-menu-medium>
+  `,
 })
 export class MenuContainerComponent {
-  protected isSmall$ = this.breakpointsObserver.isSmall$;
-  protected isMedium$ = this.breakpointsObserver.isMedium$;
-  protected isLarge$ = this.breakpointsObserver.isLarge$;
+  protected isSmallScreen$ = this.breakpointsObserver.isSmall$;
+  protected isMediumScreen$ = this.breakpointsObserver.isMedium$;
+  protected isLargeScreen$ = this.breakpointsObserver.isLarge$;
 
   constructor(private breakpointsObserver: CustomBreakpointObserver) {}
 }
