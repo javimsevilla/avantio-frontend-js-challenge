@@ -6,6 +6,7 @@ import { CustomBreakpointObserver } from 'src/app/layout';
   template: `
     <app-menu-small *ngIf="isSmallScreen$ | async"></app-menu-small>
     <app-menu-medium *ngIf="isMediumScreen$ | async"></app-menu-medium>
+    <app-menu-large *ngIf="isLargeScreen$ | async"></app-menu-large>
   `,
 })
 export class MenuContainerComponent {
