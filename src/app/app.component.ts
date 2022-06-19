@@ -16,8 +16,9 @@ import { CustomBreakpointObserver } from './layout';
       </div>
     </header>
     <nav class="app-navigation">
-      <app-menu-medium *ngIf="isMediumScreen$ | async"></app-menu-medium>
       <app-menu-small *ngIf="isSmallScreen$ | async"></app-menu-small>
+      <app-menu-medium *ngIf="isMediumScreen$ | async"></app-menu-medium>
+      <app-menu-large *ngIf="isLargeScreen$ | async"></app-menu-large>
     </nav>
     <main class="app-main-content">
       <router-outlet></router-outlet>
@@ -29,6 +30,7 @@ export class AppComponent {
   currentDate = new Date();
   isSmallScreen$ = this.breakpointsObserver.isSmall$;
   isMediumScreen$ = this.breakpointsObserver.isMedium$;
+  isLargeScreen$ = this.breakpointsObserver.isLarge$;
 
   constructor(private breakpointsObserver: CustomBreakpointObserver) {}
 }
