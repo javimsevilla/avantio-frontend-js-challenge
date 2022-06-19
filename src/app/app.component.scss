@@ -1,9 +1,9 @@
-@import 'variables';
+@import 'settings/variables';
 
 .app-logo {
-  width: 100px;
-  margin-top: 21px;
-  margin-left: 24px;
+  width: 6.25rem;
+  margin-top: 1.3125rem;
+  margin-left: 1.5rem;
 
   &:active {
     transform: scale(0.95);
@@ -11,26 +11,26 @@
 }
 
 .app-current-date {
-  width: 160px;
-  height: 60px;
+  width: 10rem;
+  height: 3.75rem;
   background: $accent;
   position: fixed;
   top: 0;
   right: 0;
-  border-bottom-left-radius: 60px;
+  border-bottom-left-radius: 3.75rem;
   color: $font-color-light;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 0.75rem;
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .app-current-date {
-    width: 290px;
-    height: 66px;
+    width: 18.125rem;
+    height: 4.125rem;
     font-size: 0.875rem;
-    padding-right: 64px;
+    padding-right: 4rem;
   }
 }

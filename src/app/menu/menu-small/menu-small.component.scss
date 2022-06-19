@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'settings/variables';
 
 .menu {
   position: fixed;
@@ -12,9 +12,9 @@
 .menu__option {
   border: none;
   bottom: 50%;
-  height: 48px;
-  width: 48px;
-  border-radius: 48px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3rem;
   background-color: transparent;
   user-select: none;
   transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
@@ -29,9 +29,9 @@
   }
 
   &:first-child > img {
-    width: 17.52px;
+    width: 1.095rem;
   }
   &:last-child > img {
-    width: 20.68px;
+    width: 1.2925rem;
   }
 }

@@ -1,20 +1,20 @@
-@import 'variables';
+@import 'settings/variables';
 
 .menu {
   position: fixed;
   left: 0;
   height: 100%;
-  width: 82px;
+  width: 5.125rem;
   box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
 }
 
 .menu__logo {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   align-self: center;
-  margin-top: 51px;
+  margin-top: 3.1875rem;
   margin-bottom: 25vh;
 
   &:active {
@@ -23,23 +23,23 @@
 }
 
 .menu__option {
-  padding: 17px 0;
+  padding: 1.0625rem 0;
   border: none;
-  height: 55px;
-  border-top-right-radius: 55px;
-  border-bottom-right-radius: 55px;
-  width: 76px;
+  height: 3.4375rem;
+  border-top-right-radius: 3.4375rem;
+  border-bottom-right-radius: 3.4375rem;
+  width: 4.75rem;
   background-color: transparent;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 
   &:first-of-type {
     & > img {
-      width: 17.52px;
+      width: 1.095rem;
     }
   }
 
   &:last-of-type > img {
-    width: 20.68px;
+    width: 1.2925rem;
   }
 
   &:hover,
@@ -48,6 +48,6 @@
   }
 
   &:active {
-    transform: scale(0.95) translateX(-2px);
+    transform: scale(0.95) translateX(-0.125rem);
   }
 }

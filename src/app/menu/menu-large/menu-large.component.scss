@@ -1,10 +1,10 @@
-@import 'variables';
+@import 'settings/variables';
 
 .menu {
   position: fixed;
   left: 0;
   height: 100%;
-  width: 268px;
+  width: 16.75rem;
   box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   align-self: center;
   width: initial;
   width: initial;
-  margin-top: 48.24px;
+  margin-top: 3.014375rem;
   margin-bottom: 6.398348813209494vh;
 
   &:active {
@@ -29,12 +29,12 @@
   .trends-counter__label,
   .trends-counter__count {
     display: block;
-    padding-left: 47px;
+    padding-left: 2.9375rem;
   }
 
   .trends-counter__label {
     color: $font-color-secondary;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     font-size: 0.875rem;
   }
 
@@ -47,15 +47,15 @@
 .menu__option {
   background-color: transparent;
   border: none;
-  height: 64px;
+  height: 4rem;
   text-align: left;
-  padding-left: 47px;
-  border-top-right-radius: 64px;
-  border-bottom-right-radius: 64px;
-  width: 245px;
+  padding-left: 2.9375rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  width: 15.3125rem;
 
   & > img {
-    height: 20px;
+    height: 1.25rem;
   }
 
   &:first-of-type {
@@ -68,13 +68,13 @@
   }
 
   &:active {
-    transform: scale(0.95) translateX(-6px);
+    transform: scale(0.95) translateX(-0.375rem);
   }
 }
 
 .menu__copyright {
   font-size: 0.75rem;
   position: absolute;
-  left: 47px;
-  bottom: 69px;
+  left: 2.9375rem;
+  bottom: 4.3125rem;
 }
