@@ -4,7 +4,7 @@ import { CustomBreakpointObserver } from './layout';
 @Component({
   selector: 'app-root',
   template: `
-    <header>
+    <header class="app-header">
       <img
         *ngIf="isSmallScreen$ | async"
         class="app-logo"
@@ -14,9 +14,11 @@ import { CustomBreakpointObserver } from './layout';
       <div class="app-current-date">
         <span>{{ currentDate | date: 'dd MMMM yyyy' }}</span>
       </div>
-      <app-menu></app-menu>
     </header>
-    <main>
+    <nav class="app-navigation">
+      <app-menu-small *ngIf="isSmallScreen$ | async"></app-menu-small>
+    </nav>
+    <main class="app-main-content">
       <router-outlet></router-outlet>
     </main>
   `,
