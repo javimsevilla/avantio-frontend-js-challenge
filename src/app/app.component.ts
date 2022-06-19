@@ -11,6 +11,9 @@ import { CustomBreakpointObserver } from './layout';
         src="assets/aTrendsPRO.svg"
         alt="Logo Avantio Trends PRO"
       />
+      <div class="app-current-date">
+        <span>{{ currentDate | date: 'dd MMMM yyyy' }}</span>
+      </div>
       <app-menu></app-menu>
     </header>
     <main>
@@ -20,6 +23,7 @@ import { CustomBreakpointObserver } from './layout';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  currentDate = new Date();
   isSmallScreen$ = this.breakpointsObserver.isSmall$;
 
   constructor(private breakpointsObserver: CustomBreakpointObserver) {}
