@@ -1,0 +1,53 @@
+@import 'variables';
+
+.menu {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 82px;
+  box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__logo {
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  margin-top: 51px;
+  margin-bottom: 25vh;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.menu__option {
+  padding: 17px 0;
+  border: none;
+  height: 55px;
+  border-top-right-radius: 55px;
+  border-bottom-right-radius: 55px;
+  width: 76px;
+  background-color: transparent;
+  margin-bottom: 25px;
+
+  &:first-of-type {
+    & > img {
+      width: 17.52px;
+    }
+  }
+
+  &:last-of-type > img {
+    width: 20.68px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $secondary;
+  }
+
+  &:active {
+    transform: scale(0.95) translateX(-2px);
+  }
+}

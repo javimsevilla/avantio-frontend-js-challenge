@@ -1,0 +1,37 @@
+@import 'variables';
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu__option {
+  border: none;
+  bottom: 50%;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  background-color: transparent;
+  user-select: none;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+  &:active {
+    background-color: $secondary;
+    transform: scale(0.95);
+  }
+
+  & > img {
+    vertical-align: bottom;
+  }
+
+  &:first-child > img {
+    width: 17.52px;
+  }
+  &:last-child > img {
+    width: 20.68px;
+  }
+}
