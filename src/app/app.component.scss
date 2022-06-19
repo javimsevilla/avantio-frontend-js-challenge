@@ -50,10 +50,35 @@
 }
 
 @media screen and (min-width: 768px) {
+  :host {
+    display: grid;
+    grid-template-columns: 5.125rem 1fr;
+    grid-template-rows: 4.125rem 1fr;
+    gap: 2rem 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'navigation header'
+      'navigation main';
+    height: 100vh;
+  }
+
+  .app-navigation {
+    position: initial;
+    grid-area: navigation;
+  }
+
+  .app-header {
+    grid-area: header;
+  }
+
+  .app-main-content {
+    grid-area: main;
+  }
+
   .app-header {
     justify-content: flex-end;
-    height: 4.125rem;
   }
+
   .app-current-date {
     flex: 0 0 18.125rem;
     height: 4.125rem;
