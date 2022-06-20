@@ -6,13 +6,14 @@ import { registerLocaleData } from '@angular/common';
 
 import localeEs from '@angular/common/locales/es';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout';
 import { AppMenuModule } from './menu';
-import { AppRoutingModule } from './app-routing.module';
-import { buildSpecificModules } from './build-specifics';
 import { reducers, metaReducers } from './store/reducers';
 import { rootEffects } from './store/effects';
+import { AppTrendsModule } from './trends';
+import { buildSpecificModules } from './build-specifics';
 
 registerLocaleData(localeEs, 'es');
 
@@ -27,6 +28,7 @@ registerLocaleData(localeEs, 'es');
       metaReducers,
     }),
     EffectsModule.forRoot(rootEffects),
+    AppTrendsModule,
     ...buildSpecificModules,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
