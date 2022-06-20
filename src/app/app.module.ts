@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout';
 import { AppMenuModule } from './menu';
 import { AppRoutingModule } from './app-routing.module';
+import { buildSpecificModules } from './build-specifics';
 import { reducers, metaReducers } from './store/reducers';
 import { rootEffects } from './store/effects';
 
@@ -26,6 +27,7 @@ registerLocaleData(localeEs, 'es');
       metaReducers,
     }),
     EffectsModule.forRoot(rootEffects),
+    ...buildSpecificModules,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent],
