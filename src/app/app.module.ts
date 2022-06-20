@@ -8,12 +8,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout';
 import { AppMenuModule } from './menu';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './store/reducers';
 
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, AppLayoutModule, AppMenuModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AppLayoutModule,
+    AppMenuModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+    }),
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent],
 })
