@@ -1,15 +1,17 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { EffectsModule } from '@ngrx/effects';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 import { registerLocaleData } from '@angular/common';
 
 import localeEs from '@angular/common/locales/es';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout';
 import { AppMenuModule } from './menu';
-import { StoreModule } from '@ngrx/store';
+import { AppRoutingModule } from './app-routing.module';
 import { reducers, metaReducers } from './store/reducers';
+import { rootEffects } from './store/effects';
 
 registerLocaleData(localeEs, 'es');
 
@@ -23,6 +25,7 @@ registerLocaleData(localeEs, 'es');
     StoreModule.forRoot(reducers, {
       metaReducers,
     }),
+    EffectsModule.forRoot(rootEffects),
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent],
