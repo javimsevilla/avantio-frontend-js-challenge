@@ -29,7 +29,7 @@ registerLocaleData(localeEs, 'es');
     }),
     EffectsModule.forRoot(rootEffects),
     AppTrendsModule,
-    ...buildSpecificModules,
+    buildSpecificModules,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }],
   bootstrap: [AppComponent],
