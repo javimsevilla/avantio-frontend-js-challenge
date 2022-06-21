@@ -5,11 +5,6 @@ export const selectTrendsState = createFeatureSelector<fromTrends.State>(
   fromTrends.trendsFeatureKey
 );
 
-export const selectTrendsLoading = createSelector(
-  selectTrendsState,
-  fromTrends.selectTrendsLoading
-);
-
 export const selectTrendIds = createSelector(
   selectTrendsState,
   fromTrends.selectTrendIds

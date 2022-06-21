@@ -3,7 +3,6 @@ import {
   selectAllTrends,
   selectTrendEntities,
   selectTrendIds,
-  selectTrendsLoading,
   selectTrendsTotal,
 } from './trends.selectors';
 
@@ -30,13 +29,7 @@ describe('Trends Selectors', () => {
         url: 'url-2',
       },
     },
-    loading: false,
   };
-
-  it('should select loading trends', () => {
-    const trendsLoading = selectTrendsLoading.projector(initialState);
-    expect(trendsLoading).toBeFalse();
-  });
 
   it('should select the trend ids list', () => {
     const trendIds = selectTrendIds.projector(initialState);

@@ -1,7 +1,6 @@
-import * as fromReducer from './index';
-import * as TrendsListPageActions from '../actions/trends-list-page.actions';
-import * as TrendsApiActions from '../actions/trends-api.actions';
 import { Trend } from '../../models/trend.model';
+import * as TrendsApiActions from '../actions/trends-api.actions';
+import * as fromReducer from './index';
 
 describe('Trends Reducer', () => {
   describe('unknown action', () => {
@@ -11,22 +10,6 @@ describe('Trends Reducer', () => {
       const state = fromReducer.trendsReducer(initialState, action);
 
       expect(state).toBe(initialState);
-    });
-  });
-
-  describe('loadTrends action', () => {
-    it('should set loading trends and update the state in an immutable way', () => {
-      const { initialState } = fromReducer;
-      const newState: fromReducer.State = {
-        ids: [],
-        entities: {},
-        loading: true,
-      };
-      const action = TrendsListPageActions.loadTrends();
-      const state = fromReducer.trendsReducer(initialState, action);
-
-      expect(state).toEqual(newState);
-      expect(state).not.toBe(newState);
     });
   });
 
@@ -46,7 +29,6 @@ describe('Trends Reducer', () => {
             createdAt: new Date(),
           },
         },
-        loading: false,
       };
       const action = TrendsApiActions.loadTrendsSuccess({
         trends: [newState.entities['id-test'] as Trend],
@@ -61,11 +43,7 @@ describe('Trends Reducer', () => {
   describe('loadTrendsError action', () => {
     it('should reset all trends and update the state in an immutable way', () => {
       const { initialState } = fromReducer;
-      const newState: fromReducer.State = {
-        ids: [],
-        entities: {},
-        loading: false,
-      };
+      const newState: fromReducer.State = { ...initialState };
       const action = TrendsApiActions.loadTrendsError();
       const state = fromReducer.trendsReducer(initialState, action);
 
