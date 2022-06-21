@@ -3,7 +3,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action, StoreModule } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
-import { trendsEffects } from '.';
 import { Trend } from '../../models/trend.model';
 import { TrendService } from '../../trend.service';
 import * as TrendsAPIActions from '../actions/trends-api.actions';
@@ -40,7 +39,7 @@ describe('Trends Effects', () => {
       {
         id: 'id-test',
         title: 'title-test',
-        body: 'body-test',
+        body: ['body-test'],
         provider: 'elpais',
         image: 'image-test',
         url: 'url-test',

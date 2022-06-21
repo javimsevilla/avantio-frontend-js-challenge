@@ -50,7 +50,7 @@ describe('TrendService', () => {
       trends: [
         {
           _id: 'id-test-1',
-          body: 'body-test-1',
+          body: 'body-test-paragraph-1\n\nbody-test-paragraph-2',
           createdAt: '2022-06-21T15:58:05.494Z',
           image: 'image-test-1',
           provider: 'elpais',
@@ -63,7 +63,7 @@ describe('TrendService', () => {
     const expectedData: Trend[] = [
       {
         id: 'id-test-1',
-        body: 'body-test-1',
+        body: ['body-test-paragraph-1', 'body-test-paragraph-2'],
         createdAt: new Date('2022-06-21T15:58:05.494Z'),
         image: 'image-test-1',
         provider: 'elpais',

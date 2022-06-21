@@ -39,7 +39,7 @@ describe('Trends Reducer', () => {
           'id-test': {
             id: 'id-test',
             title: 'title-test',
-            body: 'body-test',
+            body: ['body-test'],
             provider: 'elpais',
             image: 'image-test',
             url: 'url-test',

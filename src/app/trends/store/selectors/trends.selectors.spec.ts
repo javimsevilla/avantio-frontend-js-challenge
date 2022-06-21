@@ -12,7 +12,7 @@ describe('Trends Selectors', () => {
     ids: ['1', '2'],
     entities: {
       '1': {
-        body: 'body-1',
+        body: ['body-1'],
         createdAt: new Date(),
         id: '1',
         image: 'image-1',
@@ -21,7 +21,7 @@ describe('Trends Selectors', () => {
         url: 'url-1',
       },
       '2': {
-        body: 'body-2',
+        body: ['body-2'],
         createdAt: new Date(),
         id: '2',
         image: 'image-2',

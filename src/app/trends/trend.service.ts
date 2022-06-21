@@ -4,6 +4,8 @@ import { Trend } from './models/trend.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { TrendProvider } from './models/trend-provider.model';
+import { GetAllTrendsResponse } from './models/get-all-trends-response.model';
+import { TrendResponse } from './models/trend-response.model';
 
 @Injectable()
 export class TrendService {
@@ -14,30 +16,20 @@ export class TrendService {
   constructor(private httpClient: HttpClient) {}
 
   public getAll(): Observable<Trend[]> {
-    type ResponseType = {
-      trends: {
-        _id: string;
-        body: string;
-        createdAt: string;
-        image: string;
-        provider: string;
-        title: string;
-        url: string;
-      }[];
-    };
+    return this.httpClient
+      .get<GetAllTrendsResponse>(this.getAllUrl)
+      .pipe(map(({ trends }) => [...trends.map(this.mapToTrendModel)]));
+  }
 
-    return this.httpClient.get<ResponseType>(this.getAllUrl).pipe(
-      map(({ trends }) => [
-        ...trends.map((trend) => ({
-          id: trend._id,
-          body: trend.body,
-          createdAt: new Date(trend.createdAt),
-          image: trend.image,
-          provider: trend.provider as TrendProvider,
-          title: trend.title,
-          url: trend.url,
-        })),
-      ])
-    );
+  private mapToTrendModel(trendResponse: TrendResponse): Trend {
+    return {
+      id: trendResponse._id,
+      body: trendResponse.body.split('\n\n'),
+      createdAt: new Date(trendResponse.createdAt),
+      image: trendResponse.image,
+      provider: trendResponse.provider as TrendProvider,
+      title: trendResponse.title,
+      url: trendResponse.url,
+    };
   }
 }
