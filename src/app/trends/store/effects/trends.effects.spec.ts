@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';
-import { Action, StoreModule } from '@ngrx/store';
+import { Action } from '@ngrx/store';
+import { provideMockStore } from '@ngrx/store/testing';
 import { Observable, of } from 'rxjs';
 import { Trend } from '../../models/trend.model';
 import { TrendService } from '../../trend.service';
@@ -18,11 +19,9 @@ describe('Trends Effects', () => {
     const spy = jasmine.createSpyObj('TrendService', ['getAll']);
 
     TestBed.configureTestingModule({
-      imports: [
-        StoreModule.forRoot([]),
-        EffectsModule.forRoot([TrendsEffects]),
-      ],
+      imports: [EffectsModule.forRoot([TrendsEffects])],
       providers: [
+        provideMockStore(),
         provideMockActions(() => actions$),
         { provide: TrendService, useValue: spy },
       ],
