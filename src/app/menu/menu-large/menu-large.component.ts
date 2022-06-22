@@ -3,12 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-menu-large',
   template: `
-    <a routerLink="/">
-      <img
-        class="menu__logo"
-        src="assets/aTrendsPRO.svg"
-        alt="Logo Avantio Trends PRO"
-      />
+    <a class="app-logo menu__logo" routerLink="/">
+      <img src="assets/aTrendsPRO.svg" alt="Logo Avantio Trends PRO" />
     </a>
 
     <div class="menu__trends-counter">
