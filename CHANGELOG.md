@@ -1,6 +1,29 @@
 # Changelog
 
 
+## [1.2.0](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.1.0...v1.2.0) (2022-06-22)
+
+
+### Features
+
+* **trend detail:** add trend detail navigation ([2d3ca0c](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/2d3ca0c3cfcdf318bdadaaef9d55b013847d4e8e))
+
+
+### Other changes
+
+* remove comments ([8337662](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/8337662882bf590af2276aa0db1c10547b246839))
+* **trend effects:** add effect to get detail ([efbf3ba](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/efbf3babe1045b259187012d3900063a4b1d6209))
+* **trend reducer:** add selected trend to state ([1ef7236](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/1ef7236ac39c7e38cac33452428a692fbfd763fe))
+* **trend selectors:** add selector for trend detail ([609a4ba](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/609a4baedb6fa2684071ad97d593555a6b747299))
+* **trend service:** add method 'getOne' ([20455da](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/20455da0591f52954878787a34d3f8318332c7eb))
+
+
+### Testing
+
+* **end-to-end:** rename file trends.cy.ts → trends-list.cy.ts ([432e4ff](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/432e4ffd6b29ce4d713f8a79f131542f86839e58))
+* make some test fixes ([3b17fda](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/3b17fdabda8022961baa082e0541ca45f36ee084))
+* **trends:** add E2E test for view and filter trends ([fcac893](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/fcac8937237bbdd110442379a4034284c2269ef2))
+
 ## [1.1.0](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.0.0...v1.1.0) (2022-06-22)
 
 
