@@ -1,6 +1,13 @@
 # Changelog
 
 
+### [1.2.1](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.2.0...v1.2.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* **trends count:** get trends total count from app state ([e53aa99](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/e53aa9901efcc6bd21a44ff959bbe2d42621a7fb))
+
 ## [1.2.0](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.1.0...v1.2.0) (2022-06-22)
 
 
