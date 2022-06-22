@@ -1,6 +1,7 @@
 import { State } from '../reducers';
 import {
   selectAllTrends,
+  selectSelectedTrend,
   selectTrendEntities,
   selectTrendIds,
   selectTrendsTotal,
@@ -29,6 +30,15 @@ describe('Trends Selectors', () => {
         url: 'url-2',
       },
     },
+    selectedTrend: {
+      body: ['body-2'],
+      createdAt: new Date(),
+      id: '2',
+      image: 'image-2',
+      provider: 'elmundo',
+      title: 'title-2',
+      url: 'url-2',
+    },
   };
 
   it('should select the trend ids list', () => {
@@ -51,6 +61,11 @@ describe('Trends Selectors', () => {
 
   it('should select trends total', () => {
     const trendsTotal = selectTrendsTotal.projector(initialState);
-    expect(trendsTotal).toEqual(2);
+    expect(trendsTotal).toBe(2);
+  });
+
+  it('should select selected trend', () => {
+    const selectedTrend = selectSelectedTrend.projector(initialState);
+    expect(selectedTrend).toBe(initialState.selectedTrend);
   });
 });

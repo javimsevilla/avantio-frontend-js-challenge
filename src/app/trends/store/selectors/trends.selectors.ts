@@ -1,26 +1,26 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import * as fromTrends from '../reducers';
+import * as fromTrendsReducer from '../reducers';
 import { getSelectors } from '@ngrx/router-store';
 
 const { selectRouteParams } = getSelectors();
 
-export const selectTrendsState = createFeatureSelector<fromTrends.State>(
-  fromTrends.trendsFeatureKey
+export const selectTrendsState = createFeatureSelector<fromTrendsReducer.State>(
+  fromTrendsReducer.trendsFeatureKey
 );
 
 export const selectTrendIds = createSelector(
   selectTrendsState,
-  fromTrends.selectTrendIds
+  fromTrendsReducer.selectTrendIds
 );
 
 export const selectTrendEntities = createSelector(
   selectTrendsState,
-  fromTrends.selectTrendEntities
+  fromTrendsReducer.selectTrendEntities
 );
 
 export const selectAllTrends = createSelector(
   selectTrendsState,
-  fromTrends.selectAllTrends
+  fromTrendsReducer.selectAllTrends
 );
 
 export const selectTrendsByProvider = createSelector(
@@ -32,5 +32,10 @@ export const selectTrendsByProvider = createSelector(
 
 export const selectTrendsTotal = createSelector(
   selectTrendsState,
-  fromTrends.selectTrendTotal
+  fromTrendsReducer.selectTrendTotal
+);
+
+export const selectSelectedTrend = createSelector(
+  selectTrendsState,
+  fromTrendsReducer.selectSelectedTrend
 );
