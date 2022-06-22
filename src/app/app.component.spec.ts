@@ -9,6 +9,7 @@ import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout';
 import { AppMenuModule } from './menu';
+import { provideMockStore } from '@ngrx/store/testing';
 
 registerLocaleData(localeEs, 'es');
 
@@ -17,7 +18,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule, AppLayoutModule, AppMenuModule],
       declarations: [AppComponent],
-      providers: [{ provide: LOCALE_ID, useValue: 'es' }],
+      providers: [{ provide: LOCALE_ID, useValue: 'es' }, provideMockStore()],
     }).compileComponents();
   });
 
@@ -30,7 +31,7 @@ describe('AppComponent', () => {
   it('should render current date', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const component = fixture.componentInstance;
-    component.currentDate = new Date('2022-06-20');
+    component.currentDate = new Date('2022-06-20').getTime();
 
     fixture.detectChanges();
     const spanDebugElement = fixture.debugElement.query(

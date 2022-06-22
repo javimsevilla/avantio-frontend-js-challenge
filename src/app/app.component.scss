@@ -8,6 +8,11 @@
   gap: 2rem;
 }
 
+.app-progress-bar {
+  position: fixed;
+  top: 0;
+}
+
 .app-header {
   display: flex;
   flex-flow: row nowrap;
