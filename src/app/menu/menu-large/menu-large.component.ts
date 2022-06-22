@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { selectTrendsTotal } from 'src/app/trends/store/selectors';
 
 @Component({
   selector: 'app-menu-large',
@@ -9,7 +11,9 @@ import { Component } from '@angular/core';
 
     <div class="menu__trends-counter">
       <span class="trends-counter__label">Hoy</span>
-      <span class="trends-counter__count">132 Noticias</span>
+      <span class="trends-counter__count"
+        >{{ trendsTotal$ | async }} Noticias</span
+      >
     </div>
 
     <a
@@ -44,4 +48,8 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./menu-large.component.scss'],
 })
-export class MenuLargeComponent {}
+export class MenuLargeComponent {
+  protected trendsTotal$ = this.store.select(selectTrendsTotal);
+
+  constructor(private store: Store) {}
+}
