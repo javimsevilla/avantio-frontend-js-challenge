@@ -16,13 +16,19 @@ import { rootEffects } from './store/effects';
 import { AppTrendsModule } from './trends';
 import { buildSpecificModules } from './build-specifics';
 import { httpInterceptorProviders } from './app-http-interceptors';
+import { AppPageNotFoundComponent } from './app-page-not-found.component';
 
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
-  declarations: [AppComponent, AppProgressBarComponent],
+  declarations: [
+    AppComponent,
+    AppProgressBarComponent,
+    AppPageNotFoundComponent,
+  ],
   imports: [
     BrowserModule,
+    AppTrendsModule,
     AppRoutingModule,
     AppLayoutModule,
     AppMenuModule,
@@ -30,7 +36,6 @@ registerLocaleData(localeEs, 'es');
       metaReducers,
     }),
     EffectsModule.forRoot(rootEffects),
-    AppTrendsModule,
     buildSpecificModules,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, httpInterceptorProviders],
