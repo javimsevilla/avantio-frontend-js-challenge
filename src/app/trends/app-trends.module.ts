@@ -9,9 +9,10 @@ import { trendsEffects } from './store/effects';
 import { TrendService } from './trend.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth-interceptor';
+import { TrendDetailComponent } from './trend-detail/trend-detail.component';
 
 @NgModule({
-  declarations: [TrendsListComponent],
+  declarations: [TrendsListComponent, TrendDetailComponent],
   imports: [
     CommonModule,
     AppTrendsRoutingModule,

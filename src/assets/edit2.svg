@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24px"
+   height="25px"
+   viewBox="0 0 24 25"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="edit.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="32.56"
+     inkscape:cx="12.0086"
+     inkscape:cy="12.515356"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+  <title
+     id="title2">edit</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <g
+     id="--------1440px"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="rotate(180,12.058914,12.485774)">
+    <g
+       id="[1440px]-Detail"
+       transform="translate(-1112,-169)"
+       fill="#f15f41"
+       fill-rule="nonzero">
+      <g
+         id="Component/Actions"
+         transform="rotate(90,499,652.5)">
+        <g
+           id="Actions">
+          <g
+             id="Group-7"
+             transform="translate(0.5,0.5)">
+            <g
+               id="edit"
+               transform="translate(15.5,15)">
+              <path
+                 d="m 8.2859142,2.3386194 c 0.3297574,0 0.5970149,0.2674907 0.5970149,0.5970149 0,0.3297575 -0.2672575,0.597015 -0.5970149,0.597015 v 0 H 2.9850746 C 1.9962687,3.5338153 1.1951959,4.3351212 1.1940298,5.323694 v 0 15.557603 c 0.00117,0.988806 0.8022389,1.790112 1.7910448,1.791044 v 0 H 19.736707 c 0.988806,-9.32e-4 1.789879,-0.802238 1.791045,-1.791044 v 0 -5.30084 c 0,-0.329757 0.267257,-0.597015 0.597015,-0.597015 0.329757,0 0.597015,0.267258 0.597015,0.597015 v 0 5.301073 c -0.0019,1.647854 -1.33722,2.983209 -2.985075,2.985074 v 0 H 2.9850746 C 1.3372202,23.864739 0.00186567,22.529384 0,20.88153 v 0 V 5.323694 C 0.00186567,3.6758395 1.3372202,2.3404851 2.9850746,2.3386194 v 0 z M 18.685867,0.802472 c 1.049208,-1.04920704 2.750234,-1.04920704 3.799441,0 v 0 l 0.700559,0.7005597 c 1.047575,1.0499068 1.047575,2.7495336 0,3.7994403 v 0 L 12.534981,15.953825 c -0.07299,0.07299 -0.163479,0.125699 -0.262826,0.153218 v 0 L 7.2154851,17.507929 C 7.0081623,17.565298 6.7861474,17.506763 6.633862,17.354711 6.4818097,17.202425 6.4232743,16.98041 6.4808769,16.773088 v 0 l 1.4006529,-5.05667 c 0.027519,-0.09935 0.080224,-0.189832 0.1532183,-0.262827 v 0 z M 8.7740205,12.968517 7.9132463,16.07556 11.020056,15.214785 Z M 18.052705,3.1243004 9.3355877,11.841651 12.146688,14.652985 20.864039,5.9356343 Z m 3.588153,-1.477612 c -0.582789,-0.5827892 -1.527752,-0.5827892 -2.110541,0 v 0 l -0.633395,0.6331624 2.811567,2.8115671 0.633162,-0.6331623 c 0.581856,-0.5832556 0.581856,-1.5275186 0,-2.1110075 v 0 z"
+                 id="path6" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata178">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>edit</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
