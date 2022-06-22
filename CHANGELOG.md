@@ -1,6 +1,25 @@
 # Changelog
 
 
+## [1.1.0](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.0.0...v1.1.0) (2022-06-22)
+
+
+### Features
+
+* add a page-not-found component ([6bdbf9b](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/6bdbf9bb504aa2541ea67a47bdfe420a6f7b3cdc))
+* **app:** add an HTTP progress top bar to app ([8024486](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/802448601948222894eaf94826d1588c657c69e0))
+* **trends:** filter trends by provider ([ab27ba7](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/ab27ba75f97fd3b39ae746d763385cf5acb442ab))
+
+
+### Bug Fixes
+
+* **menu:** change z-index so that it is always on top ([39fa15b](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/39fa15b7abad122d667834802218404b718048f9))
+
+
+### Documentation
+
+* **readme:** update project info ([19948ae](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/19948ae5798124970367b3cd859c7cff98222108))
+
 ## 1.0.0 (2022-06-22)
 
 
