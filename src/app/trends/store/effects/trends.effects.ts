@@ -11,7 +11,7 @@ import * as TrendsListPageActions from '../actions/trends-list-page.actions';
 export class TrendsEffects {
   loadTrends$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(TrendsListPageActions.loadTrends.type),
+      ofType(TrendsListPageActions.loadTrends),
       mergeMap(() =>
         this.trendService.getAll().pipe(
           map((trends) => TrendsApiActions.loadTrendsSuccess({ trends })),

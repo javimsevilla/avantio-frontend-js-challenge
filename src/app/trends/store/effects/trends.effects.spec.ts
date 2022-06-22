@@ -38,6 +38,11 @@ describe('Trends Effects', () => {
     ) as jasmine.SpyObj<TrendService>;
   });
 
+  afterEach(() => {
+    // Reset actions stream to avoid calling previous effects
+    actions$ = new Observable<Action>();
+  });
+
   it('should return loadTrendsSuccess action', (done: DoneFn) => {
     const trendListMock: Trend[] = [
       {
