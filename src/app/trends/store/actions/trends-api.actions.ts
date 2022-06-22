@@ -8,3 +8,12 @@ export const loadTrendsSuccess = createAction(
 );
 
 export const loadTrendsError = createAction('[Trends/API] Load Trends Error');
+
+export const loadOneTrendSuccess = createAction(
+  '[Trends/API] Load One Trend Success',
+  props<{ trend: Trend }>()
+);
+
+export const loadOneTrendError = createAction(
+  '[Trends/API] Load One Trend Error'
+);

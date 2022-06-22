@@ -29,6 +29,7 @@ describe('Trends Reducer', () => {
             createdAt: new Date(),
           },
         },
+        selectedTrend: null,
       };
       const action = TrendsApiActions.loadTrendsSuccess({
         trends: [newState.entities['id-test'] as Trend],
@@ -45,6 +46,60 @@ describe('Trends Reducer', () => {
       const { initialState } = fromReducer;
       const newState: fromReducer.State = { ...initialState };
       const action = TrendsApiActions.loadTrendsError();
+      const state = fromReducer.trendsReducer(initialState, action);
+
+      expect(state).toEqual(newState);
+      expect(state).not.toBe(newState);
+    });
+  });
+
+  describe('loadOneTrendSuccess action', () => {
+    it('should retrieve one trend and update the state in an immutable way', () => {
+      const { initialState } = fromReducer;
+      const newState: fromReducer.State = {
+        ids: [],
+        entities: {},
+        selectedTrend: {
+          id: 'id-test',
+          title: 'title-test',
+          body: ['body-test'],
+          provider: 'elpais',
+          image: 'image-test',
+          url: 'url-test',
+          createdAt: new Date(),
+        },
+      };
+      const action = TrendsApiActions.loadOneTrendSuccess({
+        trend: newState.selectedTrend as Trend,
+      });
+      const state = fromReducer.trendsReducer(initialState, action);
+
+      expect(state).toEqual(newState);
+      expect(state).not.toBe(newState);
+    });
+  });
+
+  describe('loadOneTrendError action', () => {
+    it('should unselect selected trend and update the state in an immutable way', () => {
+      const initialState: fromReducer.State = {
+        ids: [],
+        entities: {},
+        selectedTrend: {
+          id: 'id-test',
+          title: 'title-test',
+          body: ['body-test'],
+          provider: 'elpais',
+          image: 'image-test',
+          url: 'url-test',
+          createdAt: new Date(),
+        },
+      };
+      const newState: fromReducer.State = {
+        ids: [],
+        entities: {},
+        selectedTrend: null,
+      };
+      const action = TrendsApiActions.loadOneTrendError();
       const state = fromReducer.trendsReducer(initialState, action);
 
       expect(state).toEqual(newState);

@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { TrendProvider } from './models/trend-provider.model';
 import { GetAllTrendsResponse } from './models/get-all-trends-response.model';
 import { TrendResponse } from './models/trend-response.model';
+import { GetOneTrendResponse } from './models/get-one-trend-response.model';
 
 @Injectable()
 export class TrendService {
@@ -19,6 +20,13 @@ export class TrendService {
     return this.httpClient
       .get<GetAllTrendsResponse>(this.getAllUrl)
       .pipe(map(({ trends }) => [...trends.map(this.mapToTrendModel)]));
+  }
+
+  public getOne(id: string): Observable<Trend> {
+    const url = `${this.getAllUrl}/${id}`;
+    return this.httpClient
+      .get<GetOneTrendResponse>(url)
+      .pipe(map(({ trend }) => this.mapToTrendModel(trend)));
   }
 
   private mapToTrendModel(trendResponse: TrendResponse): Trend {

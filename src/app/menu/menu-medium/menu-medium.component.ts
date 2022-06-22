@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-menu-medium',
   template: `
-    <a class="menu__logo" routerLink="/">
+    <a class="app-logo menu__logo" routerLink="/">
       <img src="assets/favicon_avantio.svg" alt="Icono Avantio" />
     </a>
 

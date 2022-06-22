@@ -1,20 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { EMPTY, of } from 'rxjs';
-import { map, mergeMap, catchError } from 'rxjs/operators';
+import { routerNavigationAction } from '@ngrx/router-store';
+import { of } from 'rxjs';
+import { catchError, filter, map, mergeMap, switchMap } from 'rxjs/operators';
 import { TrendService } from '../../trend.service';
-import * as TrendsListPageActions from '../actions/trends-list-page.actions';
 import * as TrendsApiActions from '../actions/trends-api.actions';
+import * as TrendsListPageActions from '../actions/trends-list-page.actions';
 
 @Injectable()
 export class TrendsEffects {
   loadTrends$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(TrendsListPageActions.loadTrends.type),
+      ofType(TrendsListPageActions.loadTrends),
       mergeMap(() =>
         this.trendService.getAll().pipe(
           map((trends) => TrendsApiActions.loadTrendsSuccess({ trends })),
           catchError(() => of(TrendsApiActions.loadTrendsError()))
+        )
+      )
+    );
+  });
+
+  loadOneTrend$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(routerNavigationAction),
+      filter(({ payload }) => /^\/trends\/[a-z0-9]+$/.test(payload.event.url)),
+      map(({ payload }) => payload.routerState.root.firstChild?.params['id']),
+      switchMap((id: string) =>
+        this.trendService.getOne(id).pipe(
+          map((trend) => TrendsApiActions.loadOneTrendSuccess({ trend })),
+          catchError(() => of(TrendsApiActions.loadOneTrendError()))
         )
       )
     );

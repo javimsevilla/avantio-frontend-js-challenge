@@ -45,7 +45,7 @@ describe('TrendService', () => {
     expect(trendService).toBeTruthy();
   });
 
-  it('can test HttpClient.get', () => {
+  it('should get all trends', () => {
     const testData = {
       trends: [
         {
@@ -80,6 +80,54 @@ describe('TrendService', () => {
     // If no requests or multiple requests matched that URL
     // `expectOne()` would throw.
     const req = httpTestingController.expectOne(trendService.getAllUrl);
+
+    // Assert that the request headers has X-Avantio-Auth header
+    expect(req.request.headers.has('X-Avantio-Auth')).toBeTrue();
+
+    // Assert that the request is a GET.
+    expect(req.request.method).toEqual('GET');
+
+    // Respond with mock data, causing Observable to resolve.
+    // Subscribe callback asserts that correct data was returned.
+    req.flush(testData);
+
+    // Finally, assert that there are no outstanding requests.
+    httpTestingController.verify();
+  });
+
+  it('should get one trend', () => {
+    const testData = {
+      trend: {
+        _id: 'id-test-1',
+        body: 'body-test-paragraph-1\n\nbody-test-paragraph-2',
+        createdAt: '2022-06-21T15:58:05.494Z',
+        image: 'image-test-1',
+        provider: 'elpais',
+        title: 'title-test-1',
+        url: 'url-test-1',
+      },
+    };
+
+    const expectedData: Trend = {
+      id: 'id-test-1',
+      body: ['body-test-paragraph-1', 'body-test-paragraph-2'],
+      createdAt: new Date('2022-06-21T15:58:05.494Z'),
+      image: 'image-test-1',
+      provider: 'elpais',
+      title: 'title-test-1',
+      url: 'url-test-1',
+    };
+
+    trendService
+      .getOne('id-test-1')
+      .subscribe((data) => expect(data).toEqual(expectedData));
+
+    // The following `expectOne()` will match the request's URL.
+    // If no requests or multiple requests matched that URL
+    // `expectOne()` would throw.
+    const req = httpTestingController.expectOne(
+      `${trendService.getAllUrl}/id-test-1`
+    );
 
     // Assert that the request headers has X-Avantio-Auth header
     expect(req.request.headers.has('X-Avantio-Auth')).toBeTrue();
