@@ -5,11 +5,11 @@ import { selectSelectedTrend } from '../store/selectors';
 @Component({
   selector: 'app-trend-detail',
   template: `
-    <a class="enlace__inicio" routerLink="/trends">
+    <a class="link-to-home" routerLink="/trends">
       <img src="assets/back.svg" alt="Flecha hacia atrás" />
       <span>TODOS LOS EVENTOS</span>
     </a>
-    <article class="trend" *ngIf="trend$ | async as trend">
+    <article class="trend__detail" *ngIf="trend$ | async as trend">
       <header class="trend__header">
         <div class="trend__actions">
           <button type="button" class="trend__action">

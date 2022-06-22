@@ -1,12 +1,12 @@
 @use 'sass:color';
 @import 'settings/variables';
 
-.enlace__inicio {
+.link-to-home {
   display: none;
   visibility: hidden;
 }
 
-.trend {
+.trend__detail {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 4rem;
@@ -93,7 +93,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .trend {
+  .trend__detail {
     margin-bottom: 1rem;
   }
 
@@ -142,7 +142,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .enlace__inicio {
+  .link-to-home {
     text-decoration: none;
     color: $accent;
     display: flex;
