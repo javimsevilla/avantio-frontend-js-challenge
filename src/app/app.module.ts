@@ -17,6 +17,7 @@ import { AppTrendsModule } from './trends';
 import { buildSpecificModules } from './build-specifics';
 import { httpInterceptorProviders } from './app-http-interceptors';
 import { AppPageNotFoundComponent } from './app-page-not-found.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 registerLocaleData(localeEs, 'es');
 
@@ -36,6 +37,7 @@ registerLocaleData(localeEs, 'es');
       metaReducers,
     }),
     EffectsModule.forRoot(rootEffects),
+    StoreRouterConnectingModule.forRoot(),
     buildSpecificModules,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }, httpInterceptorProviders],

@@ -19,6 +19,9 @@
   background-color: transparent;
   user-select: none;
   transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:active {
     background-color: $secondary;
@@ -34,5 +37,9 @@
   }
   &:last-child > img {
     width: 1.2925rem;
+  }
+
+  &.router-link-active {
+    background-color: $secondary;
   }
 }

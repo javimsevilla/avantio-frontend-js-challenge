@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { loadTrends } from '../store/actions/trends-list-page.actions';
-import { selectAllTrends } from '../store/selectors';
+import { selectAllTrends, selectTrendsByProvider } from '../store/selectors';
 
 @Component({
   selector: 'app-trends-list',
@@ -19,7 +19,7 @@ import { selectAllTrends } from '../store/selectors';
   styleUrls: ['./trends-list.component.scss'],
 })
 export class TrendsListComponent implements OnInit {
-  protected trends$ = this.store.select(selectAllTrends);
+  protected trends$ = this.store.select(selectTrendsByProvider);
 
   constructor(private store: Store) {}
 

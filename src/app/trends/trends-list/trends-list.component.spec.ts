@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { provideMockStore, MockStore } from '@ngrx/store/testing';
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { loadTrends } from '../store/actions/trends-list-page.actions';
-import { selectAllTrends } from '../store/selectors';
+import { selectTrendsByProvider } from '../store/selectors';
 
 import { TrendsListComponent } from './trends-list.component';
 
@@ -29,7 +29,7 @@ describe('TrendsListComponent', () => {
   it('should load trends on init', () => {
     fixture = TestBed.createComponent(TrendsListComponent);
     spyOn(store, 'dispatch').and.callFake(() => {});
-    selectAllTrends.setResult([
+    selectTrendsByProvider.setResult([
       {
         id: 'id-test-1',
         title: 'title-test-1',

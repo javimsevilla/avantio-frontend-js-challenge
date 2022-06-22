@@ -3,12 +3,32 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-menu-small',
   template: `
-    <button type="button" class="menu__option">
+    <a
+      [routerLink]="['/trends', { provider: 'elpais' }]"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{
+        matrixParams: 'exact',
+        queryParams: 'exact',
+        paths: 'exact',
+        fragment: 'exact'
+      }"
+      class="menu__option"
+    >
       <img src="assets/favicon_el_pais.svg" alt="Icono de EL PAÍS" />
-    </button>
-    <button type="button" class="menu__option">
+    </a>
+    <a
+      [routerLink]="['/trends', { provider: 'elmundo' }]"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{
+        matrixParams: 'exact',
+        queryParams: 'exact',
+        paths: 'exact',
+        fragment: 'exact'
+      }"
+      class="menu__option"
+    >
       <img src="assets/favicon_el_mundo.svg" alt="Icono de EL MUNDO" />
-    </button>
+    </a>
   `,
   styleUrls: ['./menu-small.component.scss'],
 })
