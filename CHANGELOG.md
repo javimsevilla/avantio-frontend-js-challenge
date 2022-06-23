@@ -1,6 +1,13 @@
 # Changelog
 
 
+### [1.2.2](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.2.1...v1.2.2) (2022-06-23)
+
+
+### Bug Fixes
+
+* **page not found:** make design responsive ([e10f30c](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/e10f30cc074011d867d0542b74ea4bf840340255))
+
 ### [1.2.1](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.2.0...v1.2.1) (2022-06-22)
 
 
