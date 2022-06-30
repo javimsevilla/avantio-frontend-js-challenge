@@ -1,6 +1,13 @@
 # Changelog
 
 
+### [1.2.3](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.2.2...v1.2.3) (2022-06-30)
+
+
+### Testing
+
+* **menu-large:** fix spec module dependency ([5a6e21c](https://github.com/javimsevilla/avantio-frontend-js-challenge/commit/5a6e21c8bac6ba1a5ef69ff7fb4158e1248fdda4))
+
 ### [1.2.2](https://github.com/javimsevilla/avantio-frontend-js-challenge/compare/v1.2.1...v1.2.2) (2022-06-23)
 
 
